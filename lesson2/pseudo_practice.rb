@@ -106,3 +106,5 @@ Given an array of integers
 create empty array called "result"
 iterate through original array, skipping every other element (starting with first)
 Print result
+
+=end
