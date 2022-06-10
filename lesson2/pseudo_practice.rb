@@ -1,6 +1,6 @@
 =begin
   
-Pseudo code:
+Casual pseudo code:
 
 Given a collection of integers.
 
@@ -35,76 +35,66 @@ WHILE iterator <= length of numbers
 
 END
 
-Translate Pseudo Code to Program Code:
-
-=end
-
-def find_greatest(numbers)
-  saved_number = numbers[0]
-
-  numbers.each do |num|
-    if saved_number >= num
-      next
-    else
-      saved_number = num
-    end
-  end
-
-  saved_number
-end
-
-p find_greatest([1, 3, 5, 7, 9, 11])
-p find_greatest([5, 7, 11, 9, 1, 3])
-
-=begin
-
-Pseudo Code:
+Casual pseudo Code:
 
 1. A method that returns the sum of two integers.
 
-Given two integers 
-set a result variable = to the sum of the two integers
+Given two integers
+Initiate result variable = to the sum of the two integers
 Print result 
 
 Translate to Formal Pseudo Code:
 
 START
 
-# Given two integers x and y 
-SET result = x + y
+# Given two integers num1 and num2
+SET result = num1 + num2
 PRINT result
 END
 
-Pseudo Code:
+Casual pseudo Code:
 
 2. A method that takes an array of strings, and returns a string that 
 is all those strings concatenated together.
 
-Given an array of strings called "strings"
-Create empty string called "result"
-iterate through strings & concatenate each string to "result"
+Given an array of strings
+Iterate the the array of strings
+For each iteration, append each string in the array into a result variable
+Iterate through the array until the array is empty
 Print result
 
 Translate to Formal Pseudo Code:
 
-START
-
-# Given an array of strings called "strings"
-SET result = empty string # result = " "
-FOR EACH string in strings
-SET result = result + string
+# Given an array of strings
+SET iterator = 0
+SET result
+WHILE iterator <= length of array
+SET result = result + current iteration
 PRINT result
-END
 
-Pseudo Code:
+Casual pseudo code
 
-3. A method that takes an array of integers, and returns a new array with every other
-element from the original array, starting with the first element. For instance:
-everyOther([1, 4, 7, 2, 5]) # => [1, 7, 5]
+3. A method that takes an array of integers, and returns a new array with every
+other element from the original array, starting with the first element. For
+instance: every_other([1, 4, 7, 2, 5]) # => [1, 7, 5]
 
 Given an array of integers
-create empty array called "result"
-iterate through original array, skipping every other element (starting with first)
+Iterate through the array
+Add each odd element in the array starting with first element
+Repeat until we are done iterating through each element in the array
+Save result into an empty array
 Print result
+
+Translate to formal pseudo code:
+
+# Given an array of integers
+SET result = []
+SET iterator = 0
+IF array.even? 
+skip
+ELSE result << current iteration 
+
+
+# Still working on these examples.
 
 =end
