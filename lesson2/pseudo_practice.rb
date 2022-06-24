@@ -40,16 +40,17 @@ Casual pseudo Code:
 1. A method that returns the sum of two integers.
 
 Given two integers
-Initiate result variable = to the sum of the two integers
-Print result 
+Initiate sum variable = to the sum of the two integers
+Print sum
+End
 
 Translate to Formal Pseudo Code:
 
 START
 
 # Given two integers num1 and num2
-SET result = num1 + num2
-PRINT result
+SET sum = num1 + num2
+PRINT sum
 END
 
 Casual pseudo Code:
@@ -57,22 +58,26 @@ Casual pseudo Code:
 2. A method that takes an array of strings, and returns a string that 
 is all those strings concatenated together.
 
-Given an array of strings
-Iterate the the array of strings
-For each iteration, append each string in the array into a result variable
-Iterate through the array until the array is empty
+Given an array of strings called "strings"
+Create empty string called "result"
+Iterate over "strings"
+For each iteration, concatenate each string in the array into result
+Repeat until each string has been concatenated
 Print result
+End
 
 Translate to Formal Pseudo Code:
 
-# Given an array of strings
-SET iterator = 0
-SET result
-WHILE iterator <= length of array
-SET result = result + current iteration
-PRINT result
+START
 
-Casual pseudo code
+# Given an array of strings called "strings"
+SET result = ''
+FOR EACH string in "strings"
+SET result = result + string
+PRINT result
+END
+
+Casual pseudo code:
 
 3. A method that takes an array of integers, and returns a new array with every
 other element from the original array, starting with the first element. For
@@ -80,21 +85,62 @@ instance: every_other([1, 4, 7, 2, 5]) # => [1, 7, 5]
 
 Given an array of integers
 Iterate through the array
-Add each odd element in the array starting with first element
+Add each odd element in the original array starting with first element
 Repeat until we are done iterating through each element in the array
 Save result into an empty array
 Print result
+End
 
 Translate to formal pseudo code:
+
+START
 
 # Given an array of integers
 SET result = []
 SET iterator = 0
 IF array.even? 
-skip
-ELSE result << current iteration 
+next
+ELSE result << current iteration
+PRINT result
+END 
+
+Causal pseudo code:
+
+4. A method that determines the index of the 3rd occurence of a given character
+in a string. For instance, if the given character is 'x' and the string is
+'axbxcdxex', the method should return 6 (the index of the 3rd 'x'). If the given
+character does not occur at least 3 times, return nil.
+
+Given a letter and a string of characters
+Iterate through the string of characters 
+If the letter occurs 3 times in the string of characters
+Return the index of the 3rd occurence
+If the given letter doesn't occur 3 times in the string, return nil
+Print result
+End
+
+Translate to formal pseudo code:
+
+START
+
+# Given a letter and a string of characters
 
 
-# Still working on these examples.
+ 
+Casual pseudo code:
+
+5. A method that takes two arrays of numbers and returns the result of merging
+the arrays. The elements of the first array should become the elements at the even 
+indexes of the returned array, while the elements of the second array should become
+the elements at the odd indexes. For instance: merge([1, 2, 3], [4, 5, 6]) # => [1, 4, 2, 5, 3, 6]
+
+Given two arrays of numbers
+
+
+
+
+
+
 
 =end
+
