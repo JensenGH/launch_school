@@ -1,5 +1,4 @@
 welcome: "Welcome to the Mortgage Calculator!"
-valid_name: "Please make sure you enter a valid name."
 valid_number: "Please enter a valid number (Must be positive)."
 loan_amount: "Please enter a loan amount:"
 interest_rate: "Please enter the Interest Rate: (Example: (5 for 5% or 2.5 for 2.5%)"
