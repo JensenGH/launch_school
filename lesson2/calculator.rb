@@ -19,7 +19,7 @@ def integer?(input)
 end
 
 def float?(input)
-  input.to_i().to_s() == input
+  input.to_f().to_s() == input
 end
 
 def operation_to_message(op)
