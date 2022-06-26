@@ -1,3 +1,5 @@
+# Need to finish # 3, 4, and 5.
+
 =begin
   
 Casual pseudo code:
@@ -95,14 +97,7 @@ Translate to formal pseudo code:
 
 START
 
-# Given an array of integers
-SET result = []
-SET iterator = 0
-IF array.even? 
-next
-ELSE result << current iteration
-PRINT result
-END 
+# Given an array of integers 
 
 Causal pseudo code:
 
@@ -136,11 +131,4 @@ the elements at the odd indexes. For instance: merge([1, 2, 3], [4, 5, 6]) # => 
 
 Given two arrays of numbers
 
-
-
-
-
-
-
 =end
-

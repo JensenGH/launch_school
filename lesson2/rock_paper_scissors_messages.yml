@@ -1,0 +1,4 @@
+welcome: "Welcome to Rock, Paper, Scissors!"
+valid_choice: "That's not a valid choice."
+play_again: "Would you like to play again?"
+thank_you: "Thank you for playing. Good bye!"

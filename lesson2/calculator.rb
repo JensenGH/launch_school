@@ -36,6 +36,8 @@ def operation_to_message(op)
   word
 end
 
+system("clear")
+
 prompt(messages('welcome'))
 
 name = ''

@@ -1,12 +1,9 @@
 =begin
-  
-PEDAC 
 
 Welcome the user to your program
 Prompt user for loan amount
 Prompt user for Annual Percentage Rate (APR)
 Prompt user for loan duration
-
 
 Calculate monthly interest rate
 Calculate loan duration in months
@@ -21,6 +18,12 @@ def prompt(message)
   Kernel.puts "=> #{message}"
 end
 
+def valid_number?(input)
+  input == input.to_f().to_s || input == input.to_i().to_s()
+end
+
+system "clear"
+
 loop do
   prompt MESSAGES['welcome']
   prompt MESSAGES['loan_amount']
@@ -29,10 +32,10 @@ loop do
   loop do
     amount = Kernel.gets().chomp()
 
-    if amount.empty?() || amount.to_f() < 0
-      prompt MESSAGES['valid_number']
-    else
+    if valid_number?(amount)
       break
+    else
+      prompt MESSAGES['valid_number']
     end
   end
 
@@ -42,10 +45,10 @@ loop do
   loop do
     interest_rate = Kernel.gets().chomp()
 
-    if interest_rate.empty?() || interest_rate.to_f() < 0
-      prompt MESSAGES['valid_number']
-    else
+    if valid_number?(interest_rate)
       break
+    else
+      prompt MESSAGES['valid_number']
     end
   end
 
@@ -55,10 +58,10 @@ loop do
   loop do
     years = Kernel.gets().chomp()
 
-    if years.empty?() || years.to_i < 0
-      prompt MESSAGES['valid_number']
-    else
+    if valid_number?(years)
       break
+    else
+      prompt MESSAGES['valid_number']
     end
   end
 
@@ -66,7 +69,7 @@ loop do
   monthly_interest_rate = annual_interest_rate / 12
   months = years.to_i() * 12
 
-  monthly_payment = amount.to_f() * 
+  monthly_payment = amount.to_f() *
                     (monthly_interest_rate / 
                     (1 - (1 + monthly_interest_rate)**(-months)))
 
@@ -78,5 +81,5 @@ loop do
   break unless answer.downcase().start_with?('y')
 end
 
-  prompt MESSAGES['thank_you']
-  prompt MESSAGES['good_bye']
+prompt MESSAGES['thank_you']
+prompt MESSAGES['good_bye']
