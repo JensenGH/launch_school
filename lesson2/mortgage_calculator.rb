@@ -18,8 +18,8 @@ def prompt(message)
   Kernel.puts "=> #{message}"
 end
 
-def valid_number?(input)
-  input == input.to_f().to_s || input == input.to_i().to_s()
+def not_valid_number(input)
+  input.empty?() || input.to_f() < 0
 end
 
 system "clear"
@@ -32,10 +32,10 @@ loop do
   loop do
     amount = Kernel.gets().chomp()
 
-    if valid_number?(amount)
-      break
-    else
+    if not_valid_number(amount)
       prompt MESSAGES['valid_number']
+    else
+      break
     end
   end
 
@@ -45,10 +45,10 @@ loop do
   loop do
     interest_rate = Kernel.gets().chomp()
 
-    if valid_number?(interest_rate)
-      break
-    else
+    if not_valid_number(interest_rate)
       prompt MESSAGES['valid_number']
+    else
+      break
     end
   end
 
@@ -58,10 +58,10 @@ loop do
   loop do
     years = Kernel.gets().chomp()
 
-    if valid_number?(years)
-      break
-    else
+    if not_valid_number(years)
       prompt MESSAGES['valid_number']
+    else
+      break
     end
   end
 
@@ -70,8 +70,8 @@ loop do
   months = years.to_i() * 12
 
   monthly_payment = amount.to_f() *
-                    (monthly_interest_rate / 
-                    (1 - (1 + monthly_interest_rate)**(-months)))
+                    (monthly_interest_rate / (1 -
+                    (1 + monthly_interest_rate)**(-months)))
 
   prompt("Your monthly payment is: $#{format('%.2f', monthly_payment)}")
 
