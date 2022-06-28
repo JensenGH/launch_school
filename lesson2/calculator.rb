@@ -116,6 +116,9 @@ loop do # main loop
 
   prompt(messages('another_calc'))
   answer = Kernel.gets().chomp()
+
+  system("clear")
+
   break unless answer.downcase().start_with?('y')
 end
 

@@ -22,7 +22,7 @@ def not_valid_number(input)
   input.empty?() || input.to_f() < 0
 end
 
-system "clear"
+system ("clear")
 
 loop do
   prompt MESSAGES['welcome']
@@ -77,6 +77,8 @@ loop do
 
   prompt MESSAGES['another_calc']
   answer = Kernel.gets().chomp()
+
+  system ("clear")
 
   break unless answer.downcase().start_with?('y')
 end
