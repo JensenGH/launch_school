@@ -25,3 +25,5 @@ Solution:
 The difference is that in our first implementation, we are appending new_element
 to buffer which mutates the original object, a.k.a the input argument. In our 
 second solution we are using reassignment which does not mutate the caller.
+
+=end
