@@ -29,7 +29,7 @@ def display_results(player, computer)
   end
 end
 
-system "clear"
+system ("clear")
 
 prompt MESSAGES['welcome']
 
@@ -54,6 +54,9 @@ loop do
 
   prompt MESSAGES['play_again']
   answer = Kernel.gets().chomp()
+
+  system("clear")
+
   break unless answer.downcase().start_with?('y')
 end
 
