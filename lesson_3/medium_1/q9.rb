@@ -8,6 +8,8 @@ def bar(param = "no")
   param == "no" ? "yes" : "no"
 end
 
+puts bar(foo)
+
 # What would be the return value of the following method invocation?
 
 # Solution: Since the return value of foo is "yes", and "yes" == "no" is false, the

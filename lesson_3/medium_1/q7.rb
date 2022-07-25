@@ -50,7 +50,7 @@ Solution:
 
 Yes, the original hash containing the family's data gets altered. This is because
 the values method called on family_member returns a new array populated with the
-values from the hash. Then we invoke the Array#[] method which mutates the original
+values from the hash. Then we invoke the Hash#[] = method which mutates the original
 object.
 
 =end

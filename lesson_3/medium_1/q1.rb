@@ -13,3 +13,5 @@ The Flintstones Rock!
 =end
 
 10.times { |num| puts (" " * num) + "The Flintstones Rock!"}
+# ASCII stands for "American Standard Code for Information Interchange", a common character
+# encoding format for text data in computers and internet.

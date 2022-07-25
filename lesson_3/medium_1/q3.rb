@@ -3,7 +3,7 @@
 Alan wrote the following method, which was intended to show all of the factors of 
 the input number:
 
-def factors(numbers)
+def factors(number)
   divisor = number
   factors = []
   begin
@@ -27,9 +27,14 @@ before the method's end)?
 
 # Solution:
 
-while divisor > 0
-  factors << number / divisor if number % divisor == 0
-  divisor -= 1
+def factors(number)
+  divisor = number
+  factors = []
+  while divisor > 0
+    factors << number / divisor if number % divisor == 0
+    divisor -= 1
+  end
+  factors
 end
 
 =begin
@@ -37,8 +42,8 @@ end
 Bonus 1: The purpose of number % divisor == 0  is so that we can determine if
 the result of the division is an integer number with no remainder.
 
-Bonus 2: With method definitions, the last line is what gets executed as our return
-value unless we use an explicit return statement. Therefore if we remove the factors
-on the last line, our return value would be nil.
+Bonus 2: With method definitions, the last line is the return value of the method unless
+we use an explicit return statement. Therefore if we remove the factors on the last line,
+our code gets executed, but the method's return value would be nil.
 
 =end

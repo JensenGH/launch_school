@@ -20,6 +20,6 @@ Solution:
 The result is "paper". First we evaluate rps("rock", "paper"), then we evaluate
 rps("rock", "scissors") which returns "paper" and "rock". After calling "paper"
 and "rock" to rps, the result is "paper". Finally, when "paper" is evaluated against
-"rock," the result is "paper".
+"rock" a second time, the result is "paper".
 
 =end

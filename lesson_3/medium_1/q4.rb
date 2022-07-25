@@ -22,8 +22,9 @@ end
 
 Solution:
 
-The difference is that in our first implementation, we are appending new_element
-to buffer which mutates the original object, a.k.a the input argument. In our 
-second solution we are using reassignment which does not mutate the caller.
+Both of these methods will have the same return value. The difference is that in our first method
+we use the shovel operator to append new_element to our input argument called buffer which
+mutates the input argument. In our second method we use reassignment, so our input_array is
+just a reference of our original input argument and is not destructive.
 
 =end
