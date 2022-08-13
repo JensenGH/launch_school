@@ -15,4 +15,4 @@ flintstones = { "Fred" => 0, "Wilma" => 1, "Barney" => 2,
 flintstones.assoc("Barney") # => ["Barney", 2]
 
 # This method searches through the hash comparing object with the key using the equality
-# operator ==. Returns the key-value-pair or nil if no match is found.
+# operator ==. Returns the key-value-pair (two elements array) or nil if no match is found.

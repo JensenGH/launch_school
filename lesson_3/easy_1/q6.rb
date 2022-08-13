@@ -20,4 +20,4 @@ famous_words = "seven years ago..."
 famous_words.prepend("Four score and ") # String#prepend which prepends given strings to string.
 
 # Option 4:
-"Four score and #{famous_words}" # String interpolation (uses to_s behind the scenes)
+"Four score and #{famous_words}" # String interpolation
