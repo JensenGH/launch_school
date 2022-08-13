@@ -16,7 +16,7 @@ Expected Output:
 # 1.
 munsters_description.swapcase! 
 # Returns a copy of string with uppercase alphabetic characters converted to lowercase
-# and lowercase characters to uppercase.
+# and lowercase characters converted to uppercase.
 
 # 2.
 munsters_description.capitalize!

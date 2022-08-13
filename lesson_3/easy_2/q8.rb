@@ -13,7 +13,7 @@ As a bonus, what happens if you use the String#slice method instead?
 =end
 
 advice = "Few things in life are as important as house training your pet dinosaur."
-advice.slice!(0..38) # Deletes specified portion form string and returns the portion deleted.
+advice.slice!(0..38) # Deletes specified portion from string and returns the portion deleted.
 p advice # => "house training your pet dinosaur"
 
 =begin
