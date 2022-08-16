@@ -39,12 +39,8 @@ end
 
 puts factors(10)
 
-=begin
+# Bonus 1: The purpose of number % divisor == 0  is to determine if the result of the division has
+# no remainder.
 
-Bonus 1: The purpose of number % divisor == 0  is to determine if the result of the division has
-no remainder.
-
-Bonus 2: The last line of a method is what the actual return value is, unless we use an explicit
-return statement.
-
-=end
+# Bonus 2: The last line of a method is what the actual return value is, unless we use an explicit
+# return statement.
