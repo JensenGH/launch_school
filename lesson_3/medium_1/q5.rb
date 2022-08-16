@@ -37,9 +37,9 @@ puts "result is #{result}"
 
 =begin
 
-We raise an exception because we have an undefined local variable 'limit'. This is because
-method's do not have access to variables initialized outside of the method def. We can fix
-this problem by passing in limit as an additional parameter to our method fib, then also
-adding it to our input argument.
+We raise an exception because we have an undefined local variable 'limit'. Due to variable scope,
+method definitions can't access variables initialized outside of the method def and vice versa. To
+fix this error, we can pass limit as an argument to the method when calling fib, and then adding
+it as an additonal parameter as well.
 
 =end

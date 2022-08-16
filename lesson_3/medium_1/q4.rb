@@ -1,5 +1,6 @@
 =begin
 
+Problem:
 Alyssa was asked to write an implentation of a rolling buffer. Elements are added to
 the rolling buffer and if the buffer becomes full, then new elements that are added
 will displace the oldest elements in the buffer.
@@ -21,10 +22,10 @@ def rolling_buffer2(input_array, max_buffer_size, new_element)
 end
 
 Solution:
-
-Both of these methods will have the same return value. The difference is that in our first method
-we use the shovel operator to append new_element to our input argument called buffer which
-mutates the input argument. In our second method we use reassignment, so our input_array is
-just a reference of our original input argument and is not destructive.
+Both methods have the same return value, but one difference sets them apart. In the first method,
+we use the shovel operator to append new_element to buffer. This is a destructive method, which
+means after calling this method we will have mutated the object that was passed in as an argument.
+In the second method we are using reassignment, which does not mutate the original object passed
+in as an argument to the method.
 
 =end

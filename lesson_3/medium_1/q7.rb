@@ -44,13 +44,6 @@ end
 
 p mess_with_demographics(munsters)
 
-=begin
-
-Solution:
-
-Yes, the original hash containing the family's data gets altered. This is because
-the values method called on family_member returns a new array populated with the
-values from the hash. Then we invoke the Hash#[] = method which mutates the original
-object.
-
-=end
+# Solution:
+# The hash containing the family's data does get altered. The demo_hash and munsters hash are pointing
+# to the same object. Since the demo_hash gets altered inside the method, so does the munsters hash.
