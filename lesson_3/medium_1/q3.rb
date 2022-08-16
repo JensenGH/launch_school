@@ -37,13 +37,14 @@ def factors(number)
   factors
 end
 
+puts factors(10)
+
 =begin
 
-Bonus 1: The purpose of number % divisor == 0  is so that we can determine if
-the result of the division is an integer number with no remainder.
+Bonus 1: The purpose of number % divisor == 0  is to determine if the result of the division has
+no remainder.
 
-Bonus 2: With method definitions, the last line is the return value of the method unless
-we use an explicit return statement. Therefore if we remove the factors on the last line,
-our code gets executed, but the method's return value would be nil.
+Bonus 2: The last line of a method is what the actual return value is, unless we use an explicit
+return statement.
 
 =end
