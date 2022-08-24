@@ -1,108 +1,126 @@
 =begin
 
-Still working on problems 4 and 5.
+Practicing casual and formal pseudo code
 
-The problem:
-1. A method that returns the sum of two integers.
+Problem 1: 
+A method that returns the sum of two integers.
 
-Examples/Test Cases:
-sum(2,2)
-sum(5,9)
-sum(-5, 8)
-
-Expected Output:
-4
-14
-3
-
-Casual Pseudo Code:
-
+Casual Pseudo:
 Given two integers
-Add the two integers
-Create result variable = the sum of the two integers
+Return the sum of the two integers
 Print result
 End
 
-Translate to Formal Pseudo Code:
-
-START
-
-# Given two integers num1 and num2
-SET result = num1 + num2
+Formal Pseudo:
+START 
+-Given two integers num1 and num2
+SET 
+- result = num1 + num2
 PRINT result
-END
+End
 
-The problem:
-2. A method that takes an array of strings, and returns a string that 
-is all those strings concatenated together.
+Problem 2. A method that takes an array of strings and returns a string that is all those strings
+concatenated together.
 
-Examples/Test Cases:
-concatenate(["hi", "how", "are", "you"])
-concatenate(["i", "love", "programming"])
-
-Expected Output:
-"hihowareyou"
-"iloveprogramming"
-
-Casual Pseudo Code:
-
+Casual Pseudo:
 Given an array of strings
-Concatenate all strings from given array
-Create empty string called "result"
-Iterate through the array of strings
-If the array is empty, break
-Else
-Set the result = result + string 
+Add each element of strings in the array and concatenate them together (Or convert array to a string)
 Print result
 End
 
-Translate to Formal Pseudo Code:
-
+Formal Pseudo:
 START
-
-# Given an array of strings
-SET result = String.new
-WHILE iterator <= strings
-IF string.empty? THEN break
-ELSE 
-result = result + string
-PRINT result
+- Given an array of strings
+SET
+- result = String.new
+FOR
+- each string in the array
+SET
+- result += string
+PRINT
+- result
 END
 
-The Problem:
-3. A method that takes an array of integers, and returns a new array with every
-other element from the original array, starting with the first element. For
-instance: every_other([1, 4, 7, 2, 5]) # => [1, 7, 5]
+Problem 3. A method that takes an array of integers, and returns a new array with every other
+element form the original array, starting with the first element => every_other([1, 4, 7, 1, 5]) == [1, 7, 5]
 
-Examples/Test Cases:
-every_other([1, 4, 7, 2, 5])
-every_other([4, 1, 6, 5, 8])
-every_other([8, 5, 1, 9, 4])
-
-Expected Output:
-[1, 7, 5]
-[4, 6, 8]
-[8, 1, 4]
-
-Casual Pseudo Code:
-
+Casual Pseudo:
 Given an array of integers
-Create result variable to store the elements in a new array
-Add every odd element in the array
-Iterate through the given array starting with the first element
-Save first element into the new array, skip all elements at odd indexes
-After iterating through the collection, return saved value.
+Iterate through the elements in the array one by one
+We want to return every other element in the array and print the result
+IF we start at index 0 then skip all odd indexes
+Otherwise we start at index 1, skip all even indexes
+Save the operation into a result variable
+Print reuslt
 End
 
-Translate to Formal Pseudo Code:
+Formal Pseudo:
+START
+- Given an array of integers
+SET
+- Result variable called 'result'
+SET
+- Variable called 'count' to help us iterate through the array
+IF
+- We start at index 0 then skip odd indexes, otherwise skip even
+Save into result variable
+PRINT reuslt
+END
 
-# Given an array of integers
-SET result variable = []
-WHILE iterator <= array
-IF index.odd? THEN next
+Problem 4. A method that determines the index of the 3rd occurence of a given character in a string.
+For instance, if the given character is 'x' and the string is 'axbxcdxex', the method should return
+6 (the index of the 3rd 'x'). If the given character does not occur at least 3 times, return nil.
+
+Casual Pseudo:
+Given string of characters
+Iterate through the string of characters
+If the input argument appears in the string 3 times, return the index of the 3rd occruence
+If the input argument does not appear at least 3 times in the string then return nil
+Print result
+End
+
+Formal Pseudo code:
+START
+- Given a string of characters
+SET
+- Result variable
+WHILE
+- Input argument appears at least 3 times
+PRINT
+- Index of 3rd occurence
 ELSE
-result << value
-PRINT result
+- Input argument does not appear 3 times
+PRINT
+- Return nil
+END
+
+Problem 5. A method that takes two arrays of numbers and returns the result of merging the arrays.
+The elements of the first array should become the elements at the even indexes of the returned array,
+while the elements of the second array should become the elements at the odd indexes.
+  
+Casual Pseudo:
+Given two arrays of numbers x and y
+Create a 'result' variable for the new array
+Create an index counter called 'index' and set equal to x - 1
+While the index is less then the length of x
+- append the value of position 'index' in x to result
+- append the value at position 'index' in y to result
+Increment the index after each iteration
+Print result
+End
+
+Formal Pseudo:
+START
+- Given two arrays of numbers
+SET
+- result = []
+- index = x.length - 1
+WHILE
+- index < x.length
+result << x[index]
+index += 1
+PRINT
+- result
 END
 
 =end
