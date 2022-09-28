@@ -25,7 +25,7 @@ loop do
   loop do
     loan_amount = gets.chomp
 
-    if loan_amount.empty? ||  loan_amount.to_f < 0
+    if loan_amount.empty? || loan_amount.to_f < 0
       prompt(messages('valid_number', LANGUAGE))
     else
       break
@@ -62,7 +62,7 @@ loop do
   monthly_interest_rate = annual_interest_rate / 12
   months = loan_duration.to_i * 12
 
-  monthly_payment = loan_amount.to_f * 
+  monthly_payment = loan_amount.to_f *
                     (monthly_interest_rate / 
                     (1 - (1 + monthly_interest_rate.to_f)**(-months)))
 
