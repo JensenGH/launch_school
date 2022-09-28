@@ -43,12 +43,12 @@ def operation_to_message(operation)
                    'Dividing'
                  end
 
-  system("clear") # clearing the screen before starting calculator
-
   # We can write code here after the case statement, if needed.
 
   return_value # returning the value of case
 end
+
+system("clear") # clearing the screen before starting calculator
 
 prompt(messages('welcome', LANGUAGE))
 
