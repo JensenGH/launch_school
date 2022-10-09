@@ -1,4 +1,8 @@
-welcome: "Welcome to Rock, Paper, Scissors!"
-valid_choice: "That's not a valid choice."
-play_again: "Would you like to play again?"
-thank_you: "Thank you for playing. Good bye!"
+en:
+  welcome: "Welcome to Rock Paper Scissors Lizard Spock!"
+  first_to_three: "The first player to get 3 wins becomes the grand winner!"
+  valid_choice: "That's not a valid choice. Please try again."
+  player_wins: "Congratulations! You are the grand winner!"
+  computer_wins: "You lose! Computer is the grand winner!"
+  play_again: "Would you like to play again? ('y' to keep playing)"
+  thank_you: "Thank you for playing. Good bye!"
