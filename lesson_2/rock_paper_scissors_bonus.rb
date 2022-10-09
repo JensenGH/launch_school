@@ -28,7 +28,7 @@ def win?(player_move, computer_move)
 end
 
 def game_over?
-  if SCORE_KEEPER[:player_score] == 3 || [:computer_score] == 3
+  if SCORE_KEEPER[:player_score] == 3 || SCORE_KEEPER[:computer_score] == 3
   end
 end
 
