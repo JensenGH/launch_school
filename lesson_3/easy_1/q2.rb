@@ -8,9 +8,9 @@ return false if the expression is truthy, and true if the expression is falsy. I
 bang operator when placed at the end of a method name, which signifies that the method is destructive.
 Not all methods that are destructive use bang operators.
 
-The ? in Ruby is used for ternary operator, which first evaluates an expression for a
+The ? in Ruby is used for a ternary operator, which first evaluates an expression for a
 true or false value and then executes one of the two given statements depending upon
-the result of the evaluation. It's used as a shorthand for if/else statements.
+the result of the evaluation. It's used as a shorthand for if/ else statements.
 
 1. What is != and where should you use it?
 - This inequality operator is also known as "not equal to". It's used in a conditional and 

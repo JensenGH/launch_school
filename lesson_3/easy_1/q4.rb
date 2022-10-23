@@ -21,6 +21,6 @@ return value is the element that was removed.
 2. The delete method deletes all items from self that are equal to object and returns
 the last deleted item, or nil if no matching item is found.
 
-Both methods are destructive methods that don't use the bang operator.
+Both are destructive methods that don't use the bang operator.
 
 =end
