@@ -12,4 +12,4 @@ ages.key?("Spot")
 ages.include?("Spot")
 ages.member?("Spot")
 
-# All three Hash methods return true if the given key is present in the hash.
+# All three of these Hash methods return true if the given key is present.
