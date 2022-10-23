@@ -13,4 +13,4 @@ The Flintstones Rock!
 =end
 
 10.times { |num| puts (" " * num) + "The Flintstones Rock!"}
-# String#* method will return a new string containing integer copies of the receiver.
+# String #* method will return a new string containing integer copies of the receiver.

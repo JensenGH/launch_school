@@ -9,12 +9,14 @@ She wrote two implentations saying, "Take your pick. Do you like << or + for mod
 the buffer?". Is there a difference between the two, other than what operator she
 chose to use to add an element to the buffer?
 
+# 1
 def rolling_buffer1(buffer, max_buffer_size, new_element)
   buffer << new_element
   buffer.shift if buffer.size > max_buffer_size
   buffer
 end
 
+# 2
 def rolling_buffer2(input_array, max_buffer_size, new_element)
   buffer = input_array + [new_element]
   buffer.shift if buffer.size > max_buffer_size
@@ -22,10 +24,11 @@ def rolling_buffer2(input_array, max_buffer_size, new_element)
 end
 
 Solution:
-Both methods have the same return value, but one difference sets them apart. In the first method,
-we use the shovel operator to append new_element to buffer. This is a destructive method, which
-means after calling this method we will have mutated the object that was passed in as an argument.
+Both methods have the same return value, but one difference sets them apart. 
+In the first method, we use the shovel operator to append new_element to buffer. 
+This is a destructive method, which means after calling this method we will have mutated the 
+object that was passed in as an argument.
 In the second method we are using reassignment, which does not mutate the original object passed
-in as an argument to the method.
+in as an argument to the method. It instead creates a new object.
 
 =end

@@ -36,6 +36,7 @@ munsters = {
 }
 
 def mess_with_demographics(demo_hash)
+  p demo_hash.object_id # 60
   demo_hash.values.each do |family_member|
     family_member["age"] += 42
     family_member["gender"] = "other"
@@ -43,6 +44,7 @@ def mess_with_demographics(demo_hash)
 end
 
 p mess_with_demographics(munsters)
+p munsters.object_id # 60
 
 # Solution:
 # The hash containing the family's data does get altered. The demo_hash and munsters hash are pointing

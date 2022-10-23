@@ -42,5 +42,5 @@ puts factors(10)
 # Bonus 1: The purpose of number % divisor == 0  is to determine if the result of the division has
 # no remainder.
 
-# Bonus 2: The last line of a method is what the actual return value is, unless we use an explicit
+# Bonus 2: The last line exected in a method is the return value, unless we use an explicit
 # return statement.

@@ -1,5 +1,7 @@
 =begin
 
+How would you fix this so that it works?
+
 limit = 15
 
 def fib(first_num, second_num)
@@ -12,12 +14,9 @@ def fib(first_num, second_num)
 end
 
 result = fib(0, 1)
-puts "result is #{reuslt}"
-
-How would you fix this so that it works?
+puts "result is #{result}"
 
 =end
-
 
 # Solution:
 
