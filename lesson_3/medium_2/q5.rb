@@ -19,15 +19,14 @@ puts "My array looks like this now: #{my_array}"
 # After solution:
 
 def tricky_method_two(a_string_param, an_array_param)
-  a_string_param += "rutabaga"
-  an_array_param += ["rutabaga"]
+  a_string_param += "rutabaga" # reassignment, non-mutating
+  an_array_param += ["rutabaga"] # reassignment, non-mutating
 
-  return a_string_param, an_array_param
+  return a_string_param, an_array_param # stops execution of flow and explicitly returns these specific values
 end
 
 my_string = "pumpkins"
 my_array = ["pumpkins"]
-my_string, my_array = tricky_method_two(my_string, my_array)
-
-puts "My string looks like this now: #{my_string}"
+my_string, my_array = tricky_method_two(my_string, my_array)  # Assigns returned string to my_string
+                                                              # Assigns returned array to my_array
 puts "My array looks like this now: #{my_array}"

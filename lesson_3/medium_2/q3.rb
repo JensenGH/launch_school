@@ -1,6 +1,8 @@
 def tricky_method(a_string_param, an_array_param)
   a_string_param += "rutabaga"
+  puts a_string_param
   an_array_param << "rutabaga"
+  puts an_array_param
 end
 
 my_string = "pumpkins"
@@ -12,13 +14,17 @@ puts "My string looks like this now: ##{my_array}"
 
 =begin
 
-First we have a string object that is assigned to a local variable called my_string and an array
-object that is assigned to the local variable my_array. On line 2 in our method we are using 
-reassignment which creates a copy of the object that was passed in. This means that my_string and
-a_string_param are now pointing to two different objects. This is why on line 10 when we output
-my_string it still says "pumpkins". On line 3 we are using the shovel operator which is a mutating
-method. Since this method is destructive, we use the original object that was passed in and append
-a new element to the array. This is why on line 11 our output of my_array is now a new array with
-the added element.
+It's important to remember that method definitions are self-contained with respect to local variables.
+Local variables outisde of the method def are not visible inside of the method def, and vice versa.
+
+On line 8, we invoke tricky method which passes a string and an array as arguments to the method.
+On line 2, my_string is passed to a_string_param, and we use reassignment on our string objects.
+Therefore, within the method, a_string_param now references a new string "pumpkinsrutabaga".
+The original string object "pumpkins" referenced by my_string remains the same. It is not mutated.
+On line 4, my_array is passed to my_array_param. my_array_param references the array object ["pumpkins"]
+We append the string "rutabaga" to my_array_param, which pushes it to the array as a new element.
+This is a destructive method, therefore my_array is also mutated outside of the method.
+When we output the first message, the my_string variable remains the same, "pumpkins"
+When we output the second message, the my_array variable now refereces the same array object, but mutated. ["pumpkins", "rutabaga"]
 
 =end

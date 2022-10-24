@@ -4,7 +4,7 @@ def color_valid(color)
   if color == "blue" || color == "green"
     true
   else
-    fasle
+    false
   end
 end
 
@@ -13,3 +13,7 @@ end
 def color_valid(color)
   color == "blue" || color == "green"
 end
+
+# Using a ternary operator.
+
+color == "blue" || color == "green" ? true : false

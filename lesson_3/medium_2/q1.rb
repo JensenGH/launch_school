@@ -16,8 +16,9 @@ puts a.object_id # => 880
 puts b.object_id # => 900
 puts c.object_id # => 880
 
-# Solution:
+=begin
 
-# The local variable a and b share the same string value, but they are pointing to different
-# objects. Local variable c gets initialized equal to a, meaning they now point to the same
-# object. This is why they share the same object id.
+Here we have 3 local variables a, b, and c. Local variables a and b both share the same value "forty two".
+Although they are identical, they do not point to the same object, meaning they do not share the same object id.
+The local variable c is initialized to the object that is referenced by the local variable a.
+This is why local variables a and c both share the same object id, they are pointing to the same object.
