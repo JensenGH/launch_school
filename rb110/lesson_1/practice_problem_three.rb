@@ -6,7 +6,8 @@ end
 
 # => [1, 2, 3]
 
-# The last evaluated expression in the code is `puts num` which returns nil, therefore the block
-# returns nil on each iteration. The `reject` method will selected elements from the array
-# for which the block returns nil or false (in other words a falsey value). Since the block's
-# return value is considered falsey, each element is selected and returned in a new array.
+# The return value of the `reject` method in the code above is a new array that contains
+# all three elements from the original collection that `reject` is being called on. When the
+# `reject` method is invoked on an array, it will return a new array containing elements for
+# which the block returns false or nil. The last evaluated expression is `puts num`, which 
+# returns `nil`. Therefore, the block's return value will always be nil.

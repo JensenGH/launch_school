@@ -7,8 +7,8 @@ end
 
 # => [1, 2, 3] returns a new array containing the elements from the original array
 
-# Since the string 'hi' is the last evaluated expression from within the block, this will
-# always be the return value. The string 'hi' is also considered a truthy value. The block
-# returns a value for each iteration, which then gets evaluated by the #select method. Since
-# the block returns a truthy value for each iteration, each element from the array is selected.
-# The #select method returns a new array containing all three elements from the original array.
+# The return value of the `select` method is a new array that contains all three elements
+# from the original collection that the select method is being called on. This is because
+# the string `hi` is the last evaluated expression, and is also the return value for each
+# iteration. The string `hi` is a truthy value, therefore each element is selected and
+# returned in a new array.
