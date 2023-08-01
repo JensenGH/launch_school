@@ -3,8 +3,6 @@
 ['ant', 'bear', 'caterpillar'].pop.size
 # => 11
 
-# The return value from the following code is the integer 11. First, the array `pop` method
-# is invoked on the array which removes the string 'caterpillar' from the array and then 
-# returns it. The string `size` method returns an integer that represents how many characters
-# are in the given string. When this method is invoked on the string 'caterpillar', the integer
-# 11 is returned.
+# The return value from the following code is the integer `11`. The array `pop` method removes
+# and returns the last element from an array, in this case it's the string 'caterpillar'. The
+# array #size method is then being called on that string, which returns the integer `11`.
