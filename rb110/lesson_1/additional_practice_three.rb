@@ -18,4 +18,4 @@ ages.select! do |_, value|
   value < 100
 end
 
-p ages
+p ages # => {"Herman"=> 32, "Lily"=> 30, "Eddie"=> 10}
