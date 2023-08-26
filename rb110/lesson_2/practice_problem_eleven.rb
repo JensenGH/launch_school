@@ -6,10 +6,20 @@
 
 arr = [[2], [3, 5, 7, 12], [9], [11, 13, 15]]
 
-multiples_of_three = arr.map do |sub_arr|
+solution1 = arr.map do |sub_arr|
   sub_arr.select do |num|
-    num if num % 3 == 0
+    num % 3 == 0
   end
 end
 
-p multiples_of_three
+p solution1 # => [[], [3, 12], [9], [15]] selected elements that are multiples of 3
+
+# Solution using #reject
+
+solution2 = arr.map do |sub_arr|
+  sub_arr.reject do |num|
+    num % 3 != 0
+  end
+end
+
+p solution2 # => [[], [3, 12], [9], [15]] rejecting elements that are not multiples of 3
