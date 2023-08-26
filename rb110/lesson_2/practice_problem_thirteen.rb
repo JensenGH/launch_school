@@ -5,12 +5,18 @@
 
 arr = [[1, 6, 9], [6, 1, 7], [1, 8, 3], [1, 5, 9]]
 
-sorted_arr = arr.sort_by do |sub_arr|
-  sub_arr.select do |num|
-    num % 2 == 1
-  end
+# Solution 1
+
+solution1 = arr.sort_by do |sub_arr|
+  sub_arr.select { |num| num % 2 == 1 }
 end
 
-p sorted_arr
+p solution1 # => [[1, 8, 3], [1, 5, 9], [6, 1, 7], [1, 6, 9]]
 
-# Try to come up with a second solution of your own.
+# Solution 2
+
+solution2 = arr.sort_by do |sub_arr|
+  sub_arr.partition { |num| num.odd? }
+end
+
+p solution2 # => [[1, 8, 3], [1, 5, 9], [6, 1, 7], [1, 6, 9]]

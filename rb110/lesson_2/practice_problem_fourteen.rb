@@ -14,7 +14,7 @@ hsh = {
 
 # Expected return: # => [["Red", "Green"], "MEDIUM", ["Red", "Green"], ["Orange"], "LARGE"]
 
-arr = hsh.map do |produce, details|
+result = hsh.map do |produce, details|
   if details[:type] == 'fruit'
     details[:colors].map do |color|
       color.capitalize
@@ -24,4 +24,4 @@ arr = hsh.map do |produce, details|
   end
 end
 
-p arr
+p result # => [["Red", "Green"], "MEDIUM", ["Red", "Green"], ["Orange"], "LARGE"]
