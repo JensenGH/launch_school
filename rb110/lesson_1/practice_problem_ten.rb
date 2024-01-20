@@ -12,8 +12,10 @@ end
 # 3
 # => [1, nil, nil]
 
-# The return value from the code above is determined by the block's return value. On the first
-# iteration, the if condition evaluates as false and therefore `num` is the return value. For
-# the last two elements, the expression evaluates as true, therefore `puts num` is the return
-# value for those iterations. The return value of map is a new array that contains elements
-# are the return value from the block.
+# The return value is a new Array [1, nil nil]. The Array#map method performs transformation
+# based on the block's return value. If the condition `num > 1` is met, then the element
+# for that iteration is output and `puts num` which returns `nil` is the return value, otherwise
+# `num` is the return value for that iteration. On the first iteration the condition evaluates
+# as `false` and so `num` is the return value. On the second and third iterations the condition
+# returns `true` and so `puts num` is the return value, therefore `nil` is the return value
+# for those two iterations.

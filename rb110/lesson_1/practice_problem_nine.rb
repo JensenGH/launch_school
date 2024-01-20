@@ -6,12 +6,13 @@
   end
 end
 
-# => [nil, "bear"] returns an array of objects returned by the block
+# => [nil, "bear"]
 
-# The return value of map is a new array that contains the values nil and 'bear' as elements.
-# The #map method considers the return value of the block and uses it for transformation. On the
-# first iteration, the value 'ant' evaluates as false and therefore returns nil. On the second
-# iteration, the value 'bear' is evaluates as true and is therefore returned by map.
+# The return value of Hash#map in this code is a new Array that contains elements based on
+# the block's return value. On the first iteration, the condition `value.size > 3` isn't met,
+# therefore the if statement returns `nil` which is the block's return value for that iteration.
+# On the second iteration, the string `bear` does meet the condition and so `bear` is the
+# return value for that iteration.
 
 # When there are no if conditions that evaluate as true, the if statement itself returns nil.
 # Example:

@@ -7,13 +7,12 @@
   num.odd?
 end
 
-# 1
-# => true
+# outputs the integer 1
+# any? returns true
 
-# The block's return value in the following code is a boolean value. This is determined by
-# the last evaluated expression within the block, which is `num.odd?`. This method only
-# returns a boolean value. With the Array `any` method, the block's return value only has
-# to be truthy for one element from the collection to return true. The `any` method stops
-# after the first iteration because the block returned a truthy value, and there is no need
-# to evalute the remaining elements from the array. Therefore, the integer 1 is output and the `any`
-# method returns true.
+# The block's return value is a boolean which is determined by the last evaluated expression
+# within the block, in this case it's `num.odd?`. The return value of Array#any? is `true` if
+# the block returns a truthy value on at least one iteration, `false` otherwise. On the first
+# iteration from the code above, the integer `1` is output by `puts num` and the method returns
+# `true`. The method stops iterating after the first iteration since there is no need to
+# evaluate the remaining elements from the array.
