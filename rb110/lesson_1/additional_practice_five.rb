@@ -2,17 +2,26 @@
 
 # In the array below, find the index of the first name that starts with "Be"
 
-# Solution 1:
+# Solution 1 using Array#each_with_index:
 
 flintstones = %w(Fred Barney Wilma Betty BamBam Pebbles)
-
+result = 0
 flintstones.each_with_index do |name, index|
-  puts index if name[0, 2] == "Be"
+  result = index if name[0, 2] == "Be"
 end
 
-# => 3
+p result
 
-# Solution 2:
+# Solution 2 using Array#each combined with Array#slice:
 
 flintstones = %w(Fred Barney Wilma Betty BamBam Pebbles)
-flintstones.index { |name| name[0, 2] == "Be" } # => 3
+counter = 0
+find_index = 0
+flintstones.each do |name|
+  if name.slice(0, 2) == "Be"
+    find_index = counter
+  end
+  counter += 1
+end
+
+p find_index

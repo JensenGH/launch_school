@@ -5,7 +5,8 @@
 words = "the flintstones rock"
 
 def titleize(words)
-  words.split.map { |word| word.capitalize }.join(' ')
+  result = words.split.map { |word| word.capitalize }
+  result.join(' ')
 end
 
 p titleize(words) # => "The Flintstones Rock"

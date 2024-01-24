@@ -21,7 +21,7 @@ munsters = {
   "Marilyn" => { "age" => 23, "gender" => "female"}
 }
 
-# Solution 1 using an if statement:
+# Solution 1 using an if/else statement:
 
 munsters.each_value do |info|
   if info["age"].between?(0, 17)

@@ -1,21 +1,28 @@
-# Practice problem 3:
+# Practice Problem 3:
 
-# In the ages hash below, remove people with age 100 or greater.
+# In the ages hash, remove people with age 100 and greater.
 
-ages = { "Herman" => 32, "Lily" => 30, "Grandpa" => 402, "Eddie" => 10 }
-
-ages.delete_if do |_, value|
-  value >= 100
-end
-
-p ages # => {"Herman"=> 32, "Lily"=> 30, "Eddie"=> 10}
-
-# Solution 2:
+# Solution 1 using Hash#delete:
 
 ages = { "Herman" => 32, "Lily" => 30, "Grandpa" => 402, "Eddie" => 10 }
-
-ages.select! do |_, value|
-  value < 100
+ages.each do |name, age|
+  if age >= 100
+    ages.delete(name)
+  end
 end
 
-p ages # => {"Herman"=> 32, "Lily"=> 30, "Eddie"=> 10}
+p ages
+
+# Solution 2 using Hash#delete_if:
+
+ages_2 = { "Herman" => 32, "Lily" => 30, "Grandpa" => 402, "Eddie" => 10 }
+ages_2.delete_if { |name, age| age >= 100}
+
+p ages_2
+
+# Solution 3 using Hash#select:
+
+ages_3 = { "Herman" => 32, "Lily" => 30, "Grandpa" => 402, "Eddie" => 10 }
+ages_3.select! { |name, age| age < 100 }
+
+p ages_3
